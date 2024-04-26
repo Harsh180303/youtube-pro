@@ -1,7 +1,7 @@
 import React from 'react'
 
 const VideoCard = ({ info }) => {
-    console.log({info});
+    // console.log({info});
 
     if (!info) {
       return <div>Loading...</div>; // or render any loading indicator
@@ -23,8 +23,16 @@ const VideoCard = ({ info }) => {
   )
 }
 
-export default VideoCard
+export const AdVideoCard = ({ info }) => {
+  return (
+    <div className="border border-red-900">
+      <VideoCard info={info}/>
+    </div>
+  );
+}
 
+export default VideoCard
+ 
 // ------------Snippet ------------
 // channelTitle
 // title
